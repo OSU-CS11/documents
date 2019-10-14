@@ -1,0 +1,41 @@
+\documentclass[journal,draftclsnofoot,onecolumn]{IEEEtran}
+\setlength{\parskip}{6pt}
+\begin{document}
+
+\title{Problem Statement:
+\linebreak
+A Morse Code Keyboard For iPhone\\ {\large CS 461 - Senior Capstone }}%
+
+\author{Zachary~Horine%
+}
+
+% The paper headers
+\markboth{Problem Statement - Zachary Horine}%
+
+\maketitle
+
+\begin{abstract}
+The goal of this paper is to explain the problem and proposed solution of this group. The problem we are attempting to tackle is input accessibility on iPhones. There are many different keyboards available for iPhones, but these keyboards mainly only focus on language support, and not accessibility. By creating a keyboard that implements an intelligent Morse code engine, we will be able to provide a method for those with limited dexterity to input text in a way that makes sense for them. We are aiming to create an intelligent system that is able to determine what the user is typing with a 95\% or greater accuracy, and still maintain about half the speed of normal typing.
+\end{abstract}
+\newpage
+
+\section{Introduction}
+\IEEEPARstart{T}{he} goal of our project is to provide an additional mode of input to users of iPhones. By doing this, we hope to improve the accessibility of text input, all while minimizing the effect on typing speed. We aim to achieve this by providing several ways to input Morse code, and creating an intelligent engine that can decipher user inputs with a high degree of accuracy.
+
+\section{Description of the Problem}
+\IEEEPARstart{T}{he} problem that our group is faced with is creating an alternate input method for users that have difficulty typing on a standard smart phone keyboard. This could be users with motor function or dexterity issues, or people with phones that have broken screens and do not register touch input properly. Our focus is on iPhone users, as the platform itself is already well suited towards accessibility, and implementing this feature will only add to the total value of the system. We hope to provide a method of text input that is easy to use, provides a high degree of accuracy, and a minimal impact on typing speed.
+
+\section{Proposed Solution}
+\IEEEPARstart{O}{ur} proposed solution is an accessibility keyboard to be implemented on iPhone. The concept is for a keyboard that has one button, and interprets Morse code. By creating a keyboard that can interpret Morse code, we can allow users to input text without looking at their phone, as they won't have to look at where they are placing their fingers. We would also like to implement gesture recognition, so users could shake their phone up and down to input dots and dashes. This method would further allow individuals with different types of impairments to use the keyboard, and input text.
+
+In order to make sure that our keyboard correctly interprets user input, we will be using machine learning algorithm and a translation network to decide what the user most likely typed in. We will also provide haptic feedback for the number of 'units' the user has input, so that they are more accurately able to time their dots and dashes.
+
+In addition, we would like to make sure that the phone's built-in text prediction still functions with this new keyboard, as it would help to improve typing speed when the user is looking at their phone. being able to accept the suggested word with a simple action such as shaking the phone would still allow for one-handed typing, and improve the speed at which users are able to type in Morse code.
+
+\section{Performance Metrics}
+The two performance metrics that we will be aiming to accomplish are speed and accuracy. In order to make a keyboard like this useful, it would have to be able to accurately determine the word you are typing 95\% of the time. In addition, the user should not be slowed down significantly by their choice to use our keyboard. However, since Morse code has more input characters to type one letter, it would be reasonable to assume that it would be less than half of a user's normal typing speed. Assuming that a normal person can type around 30 words per minute on a traditional smartphone keyboard, a reasonable goal to meet would be around 10 to 15 words per minute.
+
+\section{Conclusion}
+\IEEEPARstart{A}{t} the end of this project, the goal is to have a working function that can decode user input in the form of Morse code and output the decoded message to a text field the user has selected. We are aiming to maximize the accuracy of message decoding, as well as input speed. We would also like to provide the user with multiple ways to input text. Provided we are able to accomplish this goal, there is an opportunity to create additional gesture controls for the keyboard that can improve typing speed.
+
+\end{document}
