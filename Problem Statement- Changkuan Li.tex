@@ -1,0 +1,99 @@
+\documentclass[onecolumn, draftclsnofoot,10pt, compsoc]{IEEEtran}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{setspace}
+
+\usepackage{geometry}
+\geometry{textheight=9.5in, textwidth=7in}
+
+% 1. Fill in these details
+%\def \CapstoneTeamName{CS11}
+\def \CapstoneClass{CS 461,  Fall 2019}
+\def \CapstoneTeamNumber{   11}
+\def \GroupMemberOne{Changkuan Li}
+%\def \GroupMemberTwo{}
+%\def \GroupMemberThree{}
+%\def \GroupMemberFour{}
+\def \CapstoneProjectName{A Gesture Keyboard For Phones}
+
+% 2. Uncomment the appropriate line below so that the document type works
+\def \DocType{		Problem Statement
+				%Requirements Document
+				%Technology Review
+				%Design Document
+				%Progress Report
+				}
+			
+\newcommand{\NameSigPair}[1]{\par
+\makebox[2.75in][r]{#1} \hfil 	\makebox[3.25in]{\makebox[2.25in]{\hrulefill} \hfill		\makebox[.75in]{\hrulefill}}
+\par\vspace{-12pt} \textit{\tiny\noindent
+\makebox[2.75in]{} \hfil		\makebox[3.25in]{\makebox[2.25in][r]{Signature} \hfill	\makebox[.75in][r]{Date}}}}
+% 3. If the document is not to be signed, uncomment the RENEWcommand below
+\renewcommand{\NameSigPair}[1]{#1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{titlepage}
+    \pagenumbering{gobble}
+    \begin{singlespace}
+        \hfill 
+        % 4. If you have a logo, use this includegraphics command to put it on the coversheet.
+        %\includegraphics[height=4cm]{CompanyLogo}   
+        \par\vspace{.2in}
+        \centering
+        \scshape{
+            \huge CS Capstone \DocType \par
+            {\large{Oct 15, 2019}}\par
+            \vspace{.5in}
+            \textbf{\Huge\CapstoneProjectName}\par
+            \vfill
+            %{\large Prepared for}\par
+            %\Huge \CapstoneSponsorCompany\par
+            \vspace{5pt}
+            %{\Large\NameSigPair{\CapstoneSponsorPerson}\par}
+            %{\large Prepared by }\par
+            \CapstoneClass\par
+            Group\CapstoneTeamNumber\par
+            % 5. comment out the line below this one if you do not wish to name your team
+            %\CapstoneTeamName\par 
+            \vspace{5pt}
+            {\Large
+                \NameSigPair{\GroupMemberOne}\par
+                %\NameSigPair{\GroupMemberTwo}\par
+                %\NameSigPair{\GroupMemberThree}\par
+            }
+            \vspace{20pt}
+        }
+        \begin{abstract}
+        % 6. Fill in your abstract    
+        	This report serves to outline the software solution to supporting abstract forms of user input into one module for use by app developers. This report aims to divide the development process in such a way that is easy to follow while also maintaining enough detail that those in the field will understand the exact steps taken.
+        \end{abstract}     
+    \end{singlespace}
+\end{titlepage}
+\newpage
+\pagenumbering{Arabic}
+%\tableofcontents
+
+\clearpage
+
+\section{Introduction}
+
+In our everyday life, keyboard input is a tool that most of us must use to communicate on the phone every day. The goal of this project is to design an additional gesture keyboard which uses accelerometer and gyroscopes in portable devices and possibly improves user's typing experiment.
+
+\section{Problem Definition}
+
+As technology advances, methods inputting information in portable devices has broadened dramatically. From punch cards to switches and dials, it is clear that technology has come a long way. Today input avenues include touch, speech, and even a user’s unique handwriting. However, a new underutilized form of user input is emerging, using the phone’s accelerometer and gyroscopes user gestures while holding the device can be converted into a specific input. The goal of this project is to make different gestures to represent the letters of the alphabet and other special symbols. Though there are obvious limitations as to what gestures can be distinguished from one another, there may be more limitations to which gestures can be performed by the user. This requires testing when it comes to the limitations of the sensor’s accuracy as well as testing in the aptitude of user’s ability to perform certain gestures. This technology must also have an easy way to delete unwanted characters as well as stop recording user inputs. In order for such an endeavor to be successful, it should be simple for developers to support and not compromise the user experience in any way.
+
+\section{Proposal Solution}
+
+Being as there are 26 letters in the alphabet it is unreasonable to expect the user to remember 26 unique gestures. Therefore dividing the alphabet into groups is the best option, the alphabet will be divided into 5 groups, vowels and 4 groups of letters that make up the remaining alphabet without vowels in their natural order. Additionally, there will be different groups for special symbols. Each group is accessed by an initial gesture of either tilt right, tilt left, tilt forward, tilting backward or flip upside down. This initial gesture allows the user to access a subset where additional gestures create actual letters. For example, A would be a tilt left followed by another tilt left. The first tilt left indicates that the user wishes to access the vowel subset of letters and the second tilt left indicates A. With this method of input it should make it easier for users to learn and understand. Although it may be more simple for the groups to be made up of the alphabet in order, the reasoning behind the vowels having their own section is for speed. An important aspect of the module is the start and stop recording functionalities which can be accessed by using the phone's volume keys, Up volume for begin and Down for stop. This allows users to begin the phone in any orientation to start and the gestures are based on where the device was oriented at the start of the session, this allows the user to use the functionality without necessarily being restricted by how they are sitting or standing. Another point that needs to be addressed is spacing between words and deleting unwanted characters. This is made simple by utilizing the phone's accelerometer, vertical motion with the phone flat up will indicate a space whereas by contrast a vertical motion down with the phone flat will indicate a delete. This should allow users to easily delete characters that they do not want with a motion that shares no commonalities with other inputs. Lastly and arguably the most important feature when using motions for inputs is letting the user know what they have typed already, this is solved by an audio recording of the character that has been inputted after each input. However, this becomes a problem when users that are well practiced in using the technology become to fast for the audio to play after each input. Therefore, to avoid overlapping audio outputs, there will be a setting to allow users to choose to either have the audio sound out the letter or a word when it is completed. Additionally, the use of haptic feedback can be utilized after each letter a small vibration can be played which lets users know that they have successfully inputted a letter. This allows users to learn at a comfortable speed while allowing veteran users to move at their own pace.
+
+\section{Performance Metrics}
+
+The most important metric for this project is accuracy. This input option is not striving to take the place of much faster input methods such as the keyboard or speech but rather offer an alternative. Accuracy is what will attract and keep users, if they feel that they can master this method of input and not have the technology hold them back from getting the words per minute up then it is a success. Gestures have their limits when it comes to accuracy however using the refined accelerometer and gyroscope together should allow for near perfect accuracy as far as the tracking of user inputs. Limiting the device support to only a certain brand of products would help for refining the technology as it would be difficult to cater to devices that use different sensors at varying accuracies without testing each one individually.
+
+\section{Conclusion}
+
+The goal of this project is to have a new and fresh mode of user input utilizing the phone’s accelerometer and gyroscope. This is paired with the goal of having the user experience be one of fluidity and learning. If this project is done properly the limitation will not be on the technology but rather the user when it comes to speed and accuracy. This will allow for those with ambition and dedication to take this mode of input to the next level. This would entail testing and refinement when it comes to user gestures and possibly adding features to allow users to type faster.
+
+\end{document}
