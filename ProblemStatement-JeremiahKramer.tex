@@ -1,0 +1,33 @@
+\documentclass[draftclsnofoot,onecolumn]{iEEEtran}
+%\setlength{\parskip}{6pt}
+\usepackage[utf8]{inputenc}
+
+\title{Problem Statement: \\Text Generation Via Gestures\\{\large CS 461, Fall 2019}}
+\author{Jeremiah Kramer}
+\date{October 2019}
+
+
+\begin{document}
+
+\maketitle
+\markboth{Problem Statement: Text Generation Via Gestures, October 2019}{}
+\begin{abstract}
+This article explains the problem, solution, and performance metrics for this group project. The project proposal is about solving universal input front-end for mobile devices. This allows for increased user input accessibility with their personal devices. A gesture recognition engine will be built so that users can perform gestures with their handheld devices such that the user can input information to the device. We can leverage Morse code so that users can input information with reasonable speeds and high accuracy. The goal is to create an iPhone application where users can type with phone gestures with at least 90\% accuracy and allow users to type with speeds of at least 40\% of keyboard touch typing.
+\end{abstract}
+\newpage
+\section{Introduction}
+\IEEEPARstart{}{}The purpose of this article is to introduce the reader to the project by giving an overview of the problem. First, this article describes a working definition and description of solving universal input front-end for mobile devices. A proposed solution will follow the description of the problem. Included in this document will be details from the client and the description from the project proposal. Next, details that describe the performance metrics of the project will be incorporated in the document. The metrics will specifically detail what the desired outcomes are and how to know when the client's problem has been solved. Finally, a conclusion wraps up the article by summarizing the document.
+\section{Problem Description}
+\IEEEPARstart{}{}The project’s problem is to create alternative ways a user can input text in their mobile device. This would allow for more accessibility options for the user. The task is to build a module for the mobile device that can generate text from various mediums. After speaking with the client, the medium will be movement via gestures with the device. By moving the mobile phone in certain directions, the phone will use the intelligent system that we build in order to convert the gestures to text. This includes the case where the user’s screen doesn’t work and phone gestures is the only way to generate text. Further, this problem may appeal to users with physical limitations. For example, someone with chronically injured fingers might prefer this option to generate text rather than repeatedly typing on a keyboard. The goal is to create an application that is easy to use, is highly accurate, and enhances the users overall text generation experience.
+\section{Proposed Solution}
+\IEEEPARstart{}{}In order to solve this problem, our group must create a keyboard extension module available on the iPhone where users can generate text by performing a series of gestures. We want our module to incorporate Morse code as a way to enhance the modules usability for the user as well as increase the modules’ accuracy. This would limit the number of different directions the user needs to move their personal device in order to generate text. First, our group would build a Morse code interpreter that converts Morse code to the English language. Another way the user can generate text is by tapping and pressing on their devices screen in Morse code. This allows for further accessibility and makes sense for this project because of our creation of the Morse code interpreter. 
+
+From there, our group would need to create an intelligent system that recognizes device movements and maps them to corresponding text. The system would incorporate the Morse code interpreter and utilize Artificial Intelligence (AI) and Machine Learning (ML). Along with the recognition engine, the system would use haptic feedback as a feature to communicate with the user while they generate text. 
+
+Finally, this module would run an algorithm while the user inputs text that allows for predictive text auto-complete. This means that the user can generate text more efficiently. A simple movement of the device would auto-complete the predicted word when the user uses the Morse code keyboard.
+\section{Performance Metrics}
+\IEEEPARstart{}{}The most important performance metrics that we will measure is accuracy and speed. In order to create more accessibility options for the user, the solution needs to be highly accurate. Otherwise, the solution will not be used. This means that the application that is built needs to accurately generate the users word 90\% of the time. Next, speed is also a factor. This is less important than accuracy, but it still matters. The application needs to generate words at least 40\% of the speed of normal keyboard typing. These metrics will be measured and tested by gathering data from at least 5 different users, with testing sessions of at least 20 minutes of typing.
+\section{Conclusion}
+\IEEEPARstart{}{}This article outlines the problem, solution, and performance metrics of the project. This project is designed to create alternative text generation in mobile devices, specifically motion gestures of the device. The gestures will be captured and complex algorithms will be performed on the data in order to generate text for the user. The goal is to create an application that is easy to use for the user, highly accurate, and reasonably fast. By the end of the project, text generation accessibility will be enhanced for users. 
+
+\end{document}
