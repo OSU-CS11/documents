@@ -1,0 +1,124 @@
+\documentclass[onecolumn, draftclsnofoot,10pt, journal, letterpaper]{IEEEtran}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{setspace}
+\usepackage{geometry}
+\geometry{textheight=9.5in, textwidth=7in}
+\usepackage{gantt}
+
+\def \CapstoneTeamNumber{11}
+\def \GroupMemberOne{Jeremiah Kramer}
+\def \GroupMemberTwo{Zachary Horine}
+\def \GroupMemberThree{Lauren Sunamoto}
+\def \GroupMemberFour{Changkuan Li}
+\def \CapstoneProjectName{Gesture Recognition Keyboard}
+\def \CapstoneSponsorPerson{Scott Fairbanks}
+
+\def \DocType{Requirements Document}
+			
+\newcommand{\NameSigPair}[1]{\par
+\makebox[2.75in][r]{#1} \hfil 	\makebox[3.25in]{\makebox[2.25in]{\hrulefill} \hfill		\makebox[.75in]{\hrulefill}}
+\par\vspace{-12pt} \textit{\tiny\noindent
+\makebox[2.75in]{} \hfil		\makebox[3.25in]{\makebox[2.25in][r]{Signature} \hfill	\makebox[.75in][r]{Date}}}}
+%\renewcommand{\NameSigPair}[1]{#1}
+
+\begin{document}
+
+\begin{titlepage}
+    \pagenumbering{gobble}
+    \begin{singlespace}
+        \hfill 
+        \par\vspace{.2in}
+        \centering
+        \scshape{
+            \huge Senior Capstone \DocType \par
+            {\large{October 17,2019}}\par
+            \vspace{.5in}
+            \textbf{\Huge\CapstoneProjectName}\par
+            \vfill
+            \huge Oregon State University \par
+            \huge  CS 461, Fall 2019 \par
+            \vspace{.5in}
+            {\large Prepared for}\par
+            \vspace{10pt}
+            {\Large\NameSigPair{\CapstoneSponsorPerson}\par}
+            {\large Prepared by }\par
+            Group \CapstoneTeamNumber\par
+            \vspace{10pt}
+            {\Large
+                \NameSigPair{\GroupMemberOne}\par
+                \NameSigPair{\GroupMemberTwo}\par
+                \NameSigPair{\GroupMemberThree}\par
+                \NameSigPair{\GroupMemberFour}\par
+            }
+            \vspace{20pt}
+        }
+        \begin{abstract}
+            This document outlines the overall project description and specific requirements for the capstone project. Namely, concrete project milestone deliverables are decided in this paper. In order to efficiently represent this, we created a Gantt chart included in this document. The requirements consist of measurable desired outcomes of this project, focusing on speed and accuracy of the solution. 
+        \end{abstract}     
+    \end{singlespace}
+\end{titlepage}
+\newpage
+\pagenumbering{arabic}
+\markboth{Gesture Recognition Keyboard, October 17, 2019}{}%
+\tableofcontents
+
+\newpage
+\section{Introduction}
+    \subsection{Purpose}
+        The purpose of this document is to clearly outline what our group is doing for our project and determine what our client will expect when the project reaches its deadline. More importantly, this document acts as a legal contract for us, our client, instructors, and teaching assistants. 
+    \subsection{Scope}
+        This document will clearly define what our group will accomplish for our project. Also, this document will detail specific expectations for our client, instructors, and teaching assistants so that everyone has the same expectations. However, this document will not provide a detailed solution of the problem at hand. 
+    \subsection{Overview}
+        This paper is structured such that the project's description comes first. Next, requirements for the project are discussed in detail. This includes specific deliverables with corresponding metrics that determine whether or not the project has been completed with satisfaction. Then, the project milestone outline is described with a Gantt chart. Finally, we wrap up the document with a summary of what was discussed. 
+
+\section{Description}
+    
+      project goal is to create a gesture recognition keyboard for mobile phones. An application like this is designed to improve accessibility in text input, and will allow users with limited dexterity or range of motion to input text in a less standard way. By allowing users to move their phone in a series of motion gestures, we will be able to determine what letter they are attempting to type. This service will be available from any text input field the user attempts to use it in, and will provide real-time gesture recognition and processing.
+    
+
+\section{Detailed Requirements}
+    This application must be able to generate text from motion gestures with a mobile device. We will define a set of gestures that is easy to complete and replicate, and allows for a 'typing speed' of at least 10 words per minute. We will design an algorithm that can interpret these gestures, and can determine which letter the user was attempting to type with an 85\% accuracy.
+
+\section{Project Outline and Gantt Chart}
+    \scalebox{0.8}{
+    \begin{gantt}[xunitlength=0.5cm,fontsize=\small,titlefontsize=\small,drawledgerline=true]{22}{33}
+    \begin{ganttitle}
+      \titleelement{Fall 2019}{11}
+      \titleelement{Winter 2020}{11}
+      \titleelement{Spring 2020}{11}
+    \end{ganttitle}
+    \begin{ganttitle}
+      \numtitle{1}{1}{11}{1}
+      \numtitle{1}{1}{11}{1}
+      \numtitle{1}{1}{11}{1}
+      \ganttbar{Week}{0}{0}
+    \end{ganttitle}
+    
+    \ganttgroup{Documentation}{1}{9}
+    \ganttbar{Problem Statement}{1}{1}
+    \ganttbar{Requirements Document}{2}{2}
+    \ganttbar{Tech Review}{3}{2}
+    \ganttbar{Design Document}{4}{6}
+    \ganttbar{Progress}{8}{2}
+    
+    \ganttgroup{Research}{6}{11}
+    \ganttbar{Application Design}{6}{8}
+    \ganttbar{User Research}{9}{5}
+    \ganttbar{Data Collection}{10}{7}
+    
+    \ganttgroup{Development}{12}{8}
+    \ganttbar{Algorithm}{12}{8}
+    \ganttbar{Application}{14}{6}
+    
+    \ganttgroup{Testing/ Performance}{20}{7}
+    \ganttbar{Team Testing}{20}{4}
+    \ganttbar{Client Testing}{22}{2}
+    \ganttbar{User Testing}{24}{3}
+    
+    \ganttbar{Engineering Expo}{27}{1}
+    \ganttbar{Final Report}{28}{5}
+    \end{gantt}
+}
+\end{document}
