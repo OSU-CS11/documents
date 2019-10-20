@@ -1,0 +1,82 @@
+\documentclass[onecolumn,draftclsnofoot,10pt, journal, letterpaper]{IEEEtran}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{setspace}
+\usepackage{geometry}
+\geometry{textheight=9.5in, textwidth=7in}
+
+\def \CapstoneTeamNumber{11}
+\def \GroupMemberOne{Jeremiah Kramer}
+\def \GroupMemberTwo{Zachary Horine}
+\def \GroupMemberThree{Lauren Sunamoto }
+\def \GroupMemberFour{Changkuan Li}
+\def \CapstoneProjectName{Gesture Recognition Keyboard}
+\def \CapstoneSponsorPerson{Scott Fairbanks}
+
+\def \DocType{Group Problem Statement}
+			
+\newcommand{\NameSigPair}[1]{\par
+\makebox[2.75in][r]{#1} \hfil 	\makebox[3.25in]{\makebox[2.25in]{\hrulefill} \hfill		\makebox[.75in]{\hrulefill}}
+\par\vspace{-12pt} \textit{\tiny\noindent
+\makebox[2.75in]{} \hfil		\makebox[3.25in]{\makebox[2.25in][r]{Signature} \hfill	\makebox[.75in][r]{Date}}}}
+%\renewcommand{\NameSigPair}[1]{#1}
+
+\begin{document}
+
+\begin{titlepage}
+    \pagenumbering{gobble}
+    \begin{singlespace}
+        \hfill 
+        \par\vspace{.2in}
+        \centering
+        \scshape{
+            \huge Senior Capstone \\ \DocType \par
+            {\large{October 20,2019}}\par
+            \vspace{.5in}
+            \textbf{\Huge\CapstoneProjectName}\par
+            \vfill
+            \huge Oregon State University \par
+            \huge  CS 461, Fall 2019 \par
+            \vspace{10pt}
+            {\large Prepared by }\par
+            Group \CapstoneTeamNumber\par
+            \vspace{10pt}
+            {\Large
+                \GroupMemberOne, \GroupMemberTwo \\ \GroupMemberThree \& \GroupMemberFour
+            }
+            \vspace{40pt}
+        }
+        \begin{abstract}
+            \normalsize
+            The goal of this paper is to explain the problem and proposed solution of this group. The problem we are attempting to tackle is input accessibility on iPhones. There are many different keyboards available for iPhones, but these keyboards mainly only focus on language support, and not accessibility. By creating a keyboard that implements an intelligent gesture recognition engine, we will be able to provide a method for those with limited dexterity to input text in a way that makes sense for them. We are aiming to create an intelligent system that is able to determine what the user is typing with a 85\% or greater accuracy, and still maintain about half the speed of normal typing.
+        \end{abstract}     
+    \end{singlespace}
+\end{titlepage}
+\newpage
+\pagenumbering{arabic}
+\markboth{Gesture Recognition Keyboard, October 17, 2019}{}
+
+\newpage
+\section{Introduction}
+The goal of this project is to provide an additional mode of input to users of iPhones. By doing this, we hope to improve the accessibility of text input, all while minimizing the effect on typing speed. We aim to achieve this by providing a set of easy to use motion gestures, and creating an intelligent engine that can decipher user inputs with a high degree of accuracy.
+
+
+\section{Description of the Problem}
+Modern cellular devices are capable of acquiring information in various ways such as optical character recognition. And yet, users that have difficulty typing on a standard smart phone keyboard are still searching for new and inventive ways to generate text input. This could be users with phones that have broken screens that do not register touch input properly as well as users with motor function or dexterity issues who would not benefit from specific input methods such as handwriting recognition. The goal of this project is to create an application that has a simplistic and intuitive design, provides a high degree of accuracy with minimal impact on typing speed, and enhances the users' overall text generation experience. 
+
+%(from requirements:)
+%An application like this is designed to improve the accessibility of text input, and will allow users with limited dexterity or range of motion to input text in a less standard way. By allowing users to move their phone in a series of motion gestures, we will be able to determine what letter they are attempting to type. This service will be available from any text input field the user attempts to use it in, and will provide real-time gesture recognition and processing.
+\section{Proposed Solution}
+Our proposed solution is a motion-based gesture recognition keyboard for mobile phones. An application like this is designed to improve the accessibility of text input, and will allow users with limited dexterity or range of motion to input text in a less standard way. By allowing users to move their phone in a series of motion gestures, we will be able to determine what letter they are attempting to type. Our group will devise twenty-six distinct actions for each alphabet in the English language by utilizing the accelerometer and gyroscope data provided by mobile phones...
+\par This service will be available from any text input field the user attempts to use it in, and will provide real-time gesture recognition and processing. We will be using a machine learning algorithm and translation network to decide what the user most likely typed in, and output the text to the text field they are typing in.
+\par The use of haptic technology such as the generation of vibrations would aid user recognition and recall. As they provide input the immediate haptic feedback they receive will help them with improve their timing. Such feedback also enables users to encode without having to monitor their input with their eyes. 
+\par In addition, we would like to make sure that the phone’s built-in text prediction still functions with this new keyboard, as it would help to improve typing efficiency when the user is looking at their phone. A simple movement of the device such as shaking the phone would auto-complete the predicted word when the user uses the keyboard and allow one-handed typing.
+
+\section{Performance Metrics}
+The successful completion of this project can be measured by two main performance metrics: speed and accuracy. For the application to be useful and meet users' expectations, the algorithm that interprets the gestures, and can determine which letter the user was attempting to type should have an 85\% accuracy. In addition, the user should not be slowed down significantly by their choice to use our keyboard. Therefore, the application should allow for a typing speed of at least ten words per minute. 
+
+\section{Conclusion}
+At the end of this project, the goal is to have a working function that can decode user input in the form of motion gestures and output the decoded message to a text field the user has selected. We are aiming to maximize the accuracy of message decoding, as well as input speed. We would also like to provide the user with a set of easy to use gestures. Provided we are able to accomplish this goal, there is an opportunity to create additional gesture controls or the ability for users to create their own gestures for the keyboard to improve overall usability and typing speed.
+
+\end{document}
