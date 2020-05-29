@@ -1,0 +1,119 @@
+\documentclass[onecolumn, draftclsnofoot,10pt, journal, letterpaper]{IEEEtran}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{setspace}
+\usepackage{geometry}
+\geometry{textheight=9.5in, textwidth=7in}
+\setlength{\parindent}{0em}
+
+\newcommand{\NameSigPair}[1]{\par
+\makebox[2.75in][r]{#1} \hfil 	\makebox[3.25in]{\makebox[2.25in]{\hrulefill} \hfill		\makebox[.75in]{\hrulefill}}
+\par\vspace{-12pt} \textit{\tiny\noindent
+\makebox[2.75in]{} \hfil		\makebox[3.25in]{\makebox[2.25in][r]{Signature} \hfill	\makebox[.75in][r]{Date}}}}
+\renewcommand{\NameSigPair}[1]{#1}
+
+\def \CapstoneProjectName{Gesture Recognition Keyboard}
+\def \CapstoneTeamNumber{11}
+\def \publishDate{November 8, 2019}
+
+\begin{document}
+
+\begin{titlepage}
+    \pagenumbering{gobble}
+    \begin{singlespace}
+        \hfill 
+        \par\vspace{.2in}
+        \centering
+        \scshape{
+            \huge Senior Capstone \DocType \par
+            {\large{\publishDate}}\par
+            \vspace{.5in}
+            \textbf{\Huge\CapstoneProjectName}\par
+            \vfill
+            \huge Oregon State University \par
+            \huge  CS 461, Fall 2019 \par
+            \vspace{.5in}
+            {\large Prepared by }\par
+            Group \CapstoneTeamNumber\par
+            \vspace{10pt}
+            {\Large
+                \NameSigPair{Lauren Sunamoto}\par
+            }
+            \vspace{20pt}
+        }
+        \begin{abstract}
+        This document outlines three of twelve topics researched for the Gesture Recognition Keyboard project at the request of our client. The specific topics covered are Mobile Platforms, Human Computer Interaction: Computer Accessibility, and Letter Statistics. Each topic provides unique insight that our group will use to select the features to be supported and specific technologies and methods needed for the development of our mobile application. 
+        \end{abstract}     
+    \end{singlespace}
+\end{titlepage}
+\newpage
+\pagenumbering{arabic}
+\markboth{Gesture Recognition Keyboard, \publishDate}{}%
+\tableofcontents
+
+\newpage
+\section{Introduction}
+The goal of this project is to provide an additional mode of input to mobile phone users including those with motor function or dexterity issues. We hope to improve the accessibility of text input, all while minimizing the effect on typing speed. My responsibilities include reviewing mobile platforms, researching computer accessibility and statistics of letters. Each topic provides unique insight that our group will consider in selecting the specific technologies and methods we will use.
+
+\section{Mobile Platforms}
+For our mobile application, there are two options we are considering for its Platform: iOS and Android. These are currently the two most prominent mobile platforms that exist. To determine which is better suited to our requirements we must examine each platform and consider key differences between them.
+\subsection{iOS}
+iOS is a closed platform with open source components and so, customization is limited. And yet, it is known to be very secure with a prioritization of privacy, security, and reduced risk of malware. [1]. The platform's reputation for better security contributes to iOS having more penetration in the enterprise market. [2]. All applications are purchased from the Apple App Store and software updates are available for older iOS devices. iOS has a higher revenue per user. iOS applications take less time to develop as code is written using Swift, Apple's official programming language. However, the process of publishing an application is time consuming because of strict controls put in place by Apple. Also, development and testing must be conducted on an iPhone. Lastly, this platform was requested by our client to be used. [1].
+\subsection{Android}
+In contrast to the iOS platform, the Android platform is notably open source and so, there is more flexibility in which customization is much easier. But, this comes at the cost of low security and privacy controls. Android application development is known to be more complex than iOS with its applications needing to be written using Java. Some estimates put Android app development as thirty to forty percent slower than iOS on average. And yet, Android applications can be published more easily and quickly that iOS applications. There also many different types of Android smartphones that exist with differences such as screen sizes. [1]. Also, Androids are known to reach a more broad global audience, whereas iOS' audience is mostly limited to Western Europe, Australia, and North America. [2].
+\subsection{Selection}
+Because our client prefers iOS, we will use iOS rather than Android. Later, we may decide to launch the application on Android once it is established.
+
+\section{Human Computer Interaction: Computer Accessibility}
+Computer accessibility in human-computer interaction refers to the accessibility of a computer system to people despite disability type or severity of impairment. To improve the accessibility of text input, we will hopefully create features that prioritize individuals with specific visual, hearing, motor or dexterity impairments.
+\subsection{Visual Impairments}
+Visual impairments include blindness, low vision, and color blindness. [3]. In developing our application we can build features that rely on other senses such as hearing and touch. We can use haptic technology which involves sending a user feedback by creating vibrations in a mobile phone. Such feedback is important in recall and recognition of users as they learn to use the application. For example, a vibration can alert a user to the generation of a letter, and aid the speed in which they "type". Sound queues could also be used but may not be as useful for those with hearing disabilities. 
+\subsection{Hearing Disabilities}
+Hearing disabilities range in severity from total deafness to slight loss of hearing. [3]. As mentioned above, sound queues would not be very effective. Therefore, haptic technology would be a better alternative method to provide user feedback. Individuals with hearing disabilities could also benefit from screen prompts but such feature would not be as useful for those with visual impairments. 
+\subsection{Motor or dexterity impairments}
+Motor or dexterity impairments encompass a large variety impairments including total absence of limbs or digits, paralysis, lack of fine control, and instability or pain in the use of fingers, hands, wrists, or arms. [3]. Some of these individuals would especially benefit from alternatives to standard input methods (i.e. keyboard). Although, not all individuals that fall under such category will be able to use our application because it requires some fine motor skills for precise generation of characters as well as gross motor skills with wrist movement. But, there are specific elements of our application that we can do differently from traditional keyboards. 
+\subsubsection{Touchscreen Manipulation}
+Traditional mobile keyboard require steady and precise tapping on small key spaces which can be difficult for certain users such as people with Arthritis or those with uncontrollable hand tremors from Parkinson's disease or Multiple sclerosis. [4]. Therefore, our application should not require complex use of the screen. For example, in addition to defining gestures for alphabet letters we should define a gestures for deleting and shifting. It should also be error-tolerant (e.g. deletion should not necessarily be easy to do).
+\subsubsection{Customization}
+To accommodate the variation in impairments, we should allow for some customization of our application. For example, the typing speed should be easily adjustable. The transition between characters/gestures can be adjusted as well as the recognition and translation of characters/gestures.
+\subsection{Conclusion}
+In developing our application we will consider the importance of computer accessibility by creating features that meet the needs of certain individuals with specific disabilities. The functionality of our application will rely mostly on gesturing and user feedback will include haptic feedback which usable for a wide range of users. 
+
+\section{Letter Statistics}
+This application must be able to generate text from motion gestures with a mobile device. We will define a set of gestures that is easy to complete and replicate, and allows for a 'typing speed' of at least ten words per minute. We will include gestures for the thirty-size standard characters as well as include support for various modes of punctuation, white-space and capitalization. Letter statistics can be useful in determining how we define the different gestures. Furthermore, like the optimization of keyboard layout letter statistics can be used to improve typing speed and decrease user errors.
+\subsection{Letter Frequency}
+To ensure our goal typing speed, we should prioritize the most commonly used alphabetic characters and pair the least used characters with gestures that are more complex due to the need for distinct motion-based gestures. Based on a sample of 40,000 words, the letter 'Z' occurred 128 times and is the least frequently used English letter. Therefore, it should be defined in a way such that it is not easier to replicate than the most frequently used letter 'E' which occurred 21,912 times. Also, using these letter statistics we can consider how the letters relate to one another. It is easier to identify vowels because most letters appear before and/or after them. [5]. Furthermore, our application should be error-tolerant by defining the backspace character so that it cannot be misinterpreted as a common character gesture.
+\subsection{Digraph Frequency}
+In addition to letter frequency, we can  look at the statistics for digraph frequency to improve user 'typing speed' as well as accuracy and ease of use. Digraphs are pairs of letters. For example, based on a sample of 40,000 words, the most common digraph is "th" which occurred 5,532 times. This is consistent with the fact that the word "the" is the most commonly used word in the English language. This information is useful in defining motion-based gestures because it is important to consider the transition between letters, especially those that are frequently next to each other. We must consider that there are specific gestures that will be difficult to create and discern following another gesture. [6].
+\subsection{Conclusion}
+ We will be able to maximise the efficiency of typing on our keyboard by using letter and digraph frequency statistics in the defining of our motion-based gestures. The most common alphabetic characters and digraphs will be prioritized over the least common. Overall, such considerations will help in improving user experience by prioritizing ease of use and design.
+
+\pagebreak
+
+\begin{thebibliography}{1}
+
+
+\bibitem{IEEEhowto:Aggarwal}
+S.~Aggarwal, "Android vs iOS: Which Mobile Platform 
+is Best for App Development?" 18, January 2018. [Online]. Available: https://www.techaheadcorp.com/blog/android-vs-ios/. [Accessed November 8, 2019]
+
+\bibitem{IEEEhowto:med}
+"Android vs iOS: Which Platform to Build Your App for First?" 22, February 2018. [Online]. Available: https://medium.com/@themanifest/android-vs-ios-which-platform-to-build-your-app-for-first-22ea8996abe1 [Accessed November 8, 2019]
+%https://medium.com/@the_manifest/android-vs-ios-which-platform-to-build-your-app-for-first-22ea8996abe1 [Accessed November 8, 2019]
+
+\bibitem{IEEEhowto:dis}
+"Disabilities affecting computer accessibility" 23, April 2007. [Online]. Available: https://www.ics.forth.gr/hci/ua-games/disabilities.html. [Accessed November 8, 2019].
+
+\bibitem{IEEEhowto:aim}
+"Motor Disabilities: Types of Motor Disabilities" 12, October 2012. [Online]. Available: https://webaim.org/articles/motor/motordisabilities. [Accessed November 8, 2019].
+
+\bibitem{IEEEhowto:Cornell}
+"English Letter Frequency (based on a sample of 40,000 words)" [Online]. Available: http://pi.math.cornell.edu/~mec/2003-2004/cryptography/subs/frequencies.html. [Accessed November 8, 2019].
+
+\bibitem{IEEEhowto:Cornell}
+"Digraph Letter Frequency (based on a sample of 40,000 words)" [Online]. Available: http://pi.math.cornell.edu/~mec/2003-2004/cryptography/subs/digraphs.html. [Accessed November 8, 2019].
+
+\end{thebibliography}
+
+\end{document}
